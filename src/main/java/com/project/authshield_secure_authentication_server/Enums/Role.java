@@ -4,5 +4,10 @@ public enum Role {
     ADMIN,
     RECEPTION,
     DOCTOR,
-    PATIENT
+    PATIENT;
+
+    String getName() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getName'");
+    }
 }
