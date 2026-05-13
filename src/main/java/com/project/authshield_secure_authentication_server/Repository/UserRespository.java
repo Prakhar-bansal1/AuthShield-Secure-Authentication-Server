@@ -9,6 +9,7 @@ import com.project.authshield_secure_authentication_server.Entity.User;
 
 @Repository
 public interface UserRespository extends JpaRepository<User, Long>{
-   Optional<User> findByEmail(String email);
+   Optional<User> findByEmailIgnoreCase(String email);
    Optional<User> findByMobileNumber(String mobileNumber);
+   Optional<User> findByHid(String hid);
 }
