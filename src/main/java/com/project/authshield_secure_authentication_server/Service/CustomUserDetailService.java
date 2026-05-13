@@ -20,9 +20,8 @@ private final UserRespository userRespository;
     @Override
     @Transactional(readOnly=true)
     public UserDetails loadUserByUsername(String email){
-        User user = userRespository.findByEmail(email)
+        User user = userRespository.findByEmailIgnoreCase(email)
         .orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + email));
         return UserPrincipal.create(user);
     }
-    
 }
