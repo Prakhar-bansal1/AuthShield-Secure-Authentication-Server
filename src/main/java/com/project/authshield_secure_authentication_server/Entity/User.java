@@ -1,6 +1,6 @@
 package com.project.authshield_secure_authentication_server.Entity;
 
-import com.project.authshield_secure_authentication_server.Enums.Role;
+import com.project.authshield_secure_authentication_server.Enum.Roles;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
@@ -54,7 +54,7 @@ public class User {
 
     @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
-    private Set<Role> role;
+    private Set<Roles> role;
 
     @Column(nullable = false)
     @Builder.Default

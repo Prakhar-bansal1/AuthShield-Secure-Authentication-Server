@@ -9,7 +9,7 @@ public interface UserService {
 
     public void changePassword(String hid, ChangePasswordRequest request);
 
-    public void deleteAccount(String hid);
+    public void deactivateAccount(String hid);
 
     public void reactivateAccount(String hid);
 }
